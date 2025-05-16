@@ -33,8 +33,11 @@
             <input type="number" name="employees" placeholder="Number of Employees" required>
             <input type="text" name="tools" placeholder="Tools/Platforms Used">
             <textarea name="pain_points" placeholder="Main Pain Points"></textarea>
-            <button type="submit">Run My Scan</button>
-        </form>
+            <form action="https://formspree.io/f/xdkgblek" method="POST">
+  <!-- fields here -->
+  <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you">
+  <button type="submit">Run My Scan</button>
+</form>
         <div id="result" class="result" style="display:none;"></div>
     </section>
     <script>
