@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BizScan360 - Business Scan</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #333; color: white; text-align: center; padding: 20px; }
+    section { background: white; padding: 20px; max-width: 700px; margin: 40px auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1, h2 { margin: 0 0 10px; }
+    input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; font-size: 1em; }
+    button { padding: 10px 20px; background: #007BFF; color: white; border: none; font-size: 1em; cursor: pointer; }
+    button:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BizScan360</h1>
+    <p>Find Out What's Holding Your Business Back</p>
+  </header>
+  <section>
+    <h2>Run Your Free Diagnostic</h2>
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+      <label>Business Name</label>
+      <input type="text" name="Business Name" required />
+
+      <label>Industry</label>
+      <input type="text" name="Industry" required />
+
+      <label>Website URL</label>
+      <input type="url" name="Website URL" required />
+
+      <label>Monthly Revenue Range</label>
+      <select name="Monthly Revenue">
+        <option value="<10k">< $10,000</option>
+        <option value="10k-50k">$10,000–$50,000</option>
+        <option value="50k-100k">$50,000–$100,000</option>
+        <option value=">100k">> $100,000</option>
+      </select>
+
+      <label>Number of Employees</label>
+      <input type="number" name="Employees" required />
+
+      <label>Tools/Platforms Used</label>
+      <input type="text" name="Tools Used" />
+
+      <label>Main Pain Points</label>
+      <textarea name="Pain Points"></textarea>
+
+      <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html" />
+      <button type="submit">Run My Scan</button>
+    </form>
+  </section>
+</body>
+</html>
