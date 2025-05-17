@@ -41,7 +41,7 @@
     }
 
     .form-container {
-      max-width: 700px;
+      max-width: 800px;
       margin: 4rem auto;
       background: rgba(255, 255, 255, 0.05);
       padding: 2rem;
@@ -117,7 +117,7 @@
 <body>
   <header>
     <h1>BizScan360</h1>
-    <p>Uncover hidden growth opportunities in seconds. AI-powered, human-smart.</p>
+    <p>Get a free snapshot of your business with the option to upgrade to a full strategic breakdown.</p>
   </header>
 
   <div class="form-container">
@@ -142,7 +142,7 @@
         <option value="other">Other</option>
       </select>
 
-      <label for="business">Your Business or Website</label>
+      <label for="business">Business Name or Website</label>
       <input type="text" id="business" name="business" required />
 
       <label for="size">Business Size</label>
@@ -154,18 +154,40 @@
         <option value="large">50+ Employees</option>
       </select>
 
-      <label for="goals">What are you hoping to improve or find out?</label>
-      <textarea id="goals" name="goals" rows="4" required></textarea>
+      <label for="location">Business Location (City, State or Country)</label>
+      <input type="text" id="location" name="location" required />
 
-      <label for="urgency">How urgent is this need?</label>
+      <label for="platforms">What software/platforms do you currently use? (CRMs, Marketing Tools, etc.)</label>
+      <textarea id="platforms" name="platforms" rows="2"></textarea>
+
+      <label for="goals">What are your current business goals or pain points?</label>
+      <textarea id="goals" name="goals" rows="3" required></textarea>
+
+      <label for="services">What services/products do you offer?</label>
+      <textarea id="services" name="services" rows="2"></textarea>
+
+      <label for="traffic">Average Monthly Website Visitors</label>
+      <input type="number" id="traffic" name="traffic" min="0" />
+
+      <label for="revenue">Monthly Revenue (Optional)</label>
+      <input type="text" id="revenue" name="revenue" />
+
+      <label for="urgency">How soon do you want actionable insights?</label>
       <select id="urgency" name="urgency">
         <option value="">-- Select Urgency --</option>
         <option value="asap">ASAP</option>
-        <option value="soon">Soon</option>
-        <option value="whenever">Just exploring</option>
+        <option value="soon">Within 1 week</option>
+        <option value="exploring">Just exploring</option>
       </select>
 
-      <button type="submit">Run My Scan</button>
+      <label for="followup">Would you like someone to contact you with a full deep-dive analysis quote?</label>
+      <select id="followup" name="followup">
+        <option value="no">No, just send the free report</option>
+        <option value="yes_email">Yes, email me</option>
+        <option value="yes_call">Yes, call me</option>
+      </select>
+
+      <button type="submit">Get My Free Report</button>
     </form>
   </div>
 
