@@ -2,33 +2,197 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Thank You – BizScan360</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BizScan360</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; text-align: center; padding-top: 100px; }
-    .container { background: white; padding: 40px; max-width: 600px; margin: auto; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    h1 { color: #007BFF; }
-    p { font-size: 1.1em; color: #333; }
-    .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #28a745;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1em;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    .cta-button:hover {
-      background: #218838;
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      text-align: center;
+      animation: fadeInDown 1s ease;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #00ffe5;
+      text-shadow: 2px 2px 10px #000;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 4rem auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      animation: fadeInUp 1.2s ease;
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: bold;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 1rem 2rem;
+      background: #00ffe5;
+      border: none;
+      border-radius: 999px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #00ccbb;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Thanks for Submitting Your Info!</h1>
-    <p>We're analyzing your business right now.</p>
-    <p>You'll receive a complimentary partial report and options for a full analysis.</p>
-    <a href="https://yourpaymentlink.com" class="cta-button">Pay & Receive My Report</a>
+  <header>
+    <h1>BizScan360</h1>
+    <p>Get a free snapshot of your business with the option to upgrade to a full strategic breakdown.</p>
+  </header>
+
+  <div class="form-container">
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="industry">Industry</label>
+      <select id="industry" name="industry" required>
+        <option value="">-- Select Industry --</option>
+        <option value="retail">Retail</option>
+        <option value="fitness">Fitness</option>
+        <option value="healthcare">Healthcare</option>
+        <option value="nonprofit">Nonprofit</option>
+        <option value="tech">Technology</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="business">Business Name or Website</label>
+      <input type="text" id="business" name="business" required />
+
+      <label for="size">Business Size</label>
+      <select id="size" name="size">
+        <option value="">-- Select Size --</option>
+        <option value="solo">Solo</option>
+        <option value="small">1-10 Employees</option>
+        <option value="medium">11-50 Employees</option>
+        <option value="large">50+ Employees</option>
+      </select>
+
+      <label for="location">Business Location (City, State or Country)</label>
+      <input type="text" id="location" name="location" required />
+
+      <label for="platforms">What software/platforms do you currently use? (CRMs, Marketing Tools, etc.)</label>
+      <textarea id="platforms" name="platforms" rows="2"></textarea>
+
+      <label for="goals">What are your current business goals or pain points?</label>
+      <textarea id="goals" name="goals" rows="3" required></textarea>
+
+      <label for="services">What services/products do you offer?</label>
+      <textarea id="services" name="services" rows="2"></textarea>
+
+      <label for="traffic">Average Monthly Website Visitors</label>
+      <input type="number" id="traffic" name="traffic" min="0" />
+
+      <label for="revenue">Monthly Revenue (Optional)</label>
+      <input type="text" id="revenue" name="revenue" />
+
+      <label for="urgency">How soon do you want actionable insights?</label>
+      <select id="urgency" name="urgency">
+        <option value="">-- Select Urgency --</option>
+        <option value="asap">ASAP</option>
+        <option value="soon">Within 1 week</option>
+        <option value="exploring">Just exploring</option>
+      </select>
+
+      <label for="followup">Would you like someone to contact you with a full deep-dive analysis quote?</label>
+      <select id="followup" name="followup">
+        <option value="no">No, just send the free report</option>
+        <option value="yes_email">Yes, email me</option>
+        <option value="yes_call">Yes, call me</option>
+      </select>
+
+      <button type="submit">Get My Free Report</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 BizScan360. Made with grit and pixels.
   </div>
 </body>
 </html>
