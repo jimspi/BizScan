@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BizScan360</title>
+  <title>Thank You - BizScan360</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     * {
@@ -16,79 +16,46 @@
       font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #ffffff;
-      line-height: 1.6;
-      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
     }
 
-    header {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 2rem;
-      text-align: center;
+    h1 {
+      font-size: 3rem;
+      color: #00ffe5;
+      text-shadow: 2px 2px 10px #000;
+      margin-bottom: 1rem;
       animation: fadeInDown 1s ease;
     }
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      color: #00ffe5;
-      text-shadow: 2px 2px 10px #000;
-    }
-
-    header p {
-      margin-top: 0.5rem;
+    p {
       font-size: 1.2rem;
+      max-width: 600px;
       color: #ccc;
-    }
-
-    .form-container {
-      max-width: 800px;
-      margin: 4rem auto;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
       animation: fadeInUp 1.2s ease;
     }
 
-    label {
-      display: block;
-      margin: 1rem 0 0.5rem;
-      font-weight: bold;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 0.8rem;
-      border: none;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-      font-size: 1rem;
-    }
-
-    button {
-      margin-top: 1.5rem;
-      padding: 1rem 2rem;
+    .btn {
+      margin-top: 2rem;
+      padding: 0.8rem 2rem;
       background: #00ffe5;
+      color: #000;
+      font-weight: bold;
       border: none;
       border-radius: 999px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #000;
+      font-size: 1rem;
       cursor: pointer;
       transition: background 0.3s ease;
+      text-decoration: none;
     }
 
-    button:hover {
+    .btn:hover {
       background: #00ccbb;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #aaa;
     }
 
     @keyframes fadeInDown {
@@ -115,84 +82,12 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>BizScan360</h1>
-    <p>Get a free snapshot of your business with the option to upgrade to a full strategic breakdown.</p>
-  </header>
-
-  <div class="form-container">
-    <form action="https://formspree.io/f/xdkgblek" method="POST">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" />
-
-      <label for="industry">Industry</label>
-      <select id="industry" name="industry" required>
-        <option value="">-- Select Industry --</option>
-        <option value="retail">Retail</option>
-        <option value="fitness">Fitness</option>
-        <option value="healthcare">Healthcare</option>
-        <option value="nonprofit">Nonprofit</option>
-        <option value="tech">Technology</option>
-        <option value="other">Other</option>
-      </select>
-
-      <label for="business">Business Name or Website</label>
-      <input type="text" id="business" name="business" required />
-
-      <label for="size">Business Size</label>
-      <select id="size" name="size">
-        <option value="">-- Select Size --</option>
-        <option value="solo">Solo</option>
-        <option value="small">1-10 Employees</option>
-        <option value="medium">11-50 Employees</option>
-        <option value="large">50+ Employees</option>
-      </select>
-
-      <label for="location">Business Location (City, State or Country)</label>
-      <input type="text" id="location" name="location" required />
-
-      <label for="platforms">What software/platforms do you currently use? (CRMs, Marketing Tools, etc.)</label>
-      <textarea id="platforms" name="platforms" rows="2"></textarea>
-
-      <label for="goals">What are your current business goals or pain points?</label>
-      <textarea id="goals" name="goals" rows="3" required></textarea>
-
-      <label for="services">What services/products do you offer?</label>
-      <textarea id="services" name="services" rows="2"></textarea>
-
-      <label for="traffic">Average Monthly Website Visitors</label>
-      <input type="number" id="traffic" name="traffic" min="0" />
-
-      <label for="revenue">Monthly Revenue (Optional)</label>
-      <input type="text" id="revenue" name="revenue" />
-
-      <label for="urgency">How soon do you want actionable insights?</label>
-      <select id="urgency" name="urgency">
-        <option value="">-- Select Urgency --</option>
-        <option value="asap">ASAP</option>
-        <option value="soon">Within 1 week</option>
-        <option value="exploring">Just exploring</option>
-      </select>
-
-      <label for="followup">Would you like someone to contact you with a full deep-dive analysis quote?</label>
-      <select id="followup" name="followup">
-        <option value="no">No, just send the free report</option>
-        <option value="yes_email">Yes, email me</option>
-        <option value="yes_call">Yes, call me</option>
-      </select>
-
-      <button type="submit">Get My Free Report</button>
-    </form>
-  </div>
-
-  <div class="footer">
-    &copy; 2025 BizScan360. Made with grit and pixels.
-  </div>
+  <h1>You're All Set!</h1>
+  <p>
+    Thanks for submitting your info. We're running your complimentary business scan now. <br />
+    Keep an eye on your inbox — you'll get your free insights soon. If you asked for a full analysis follow-up, our team will be in touch.
+  </p>
+  <a href="index.html" class="btn">Back to Home</a>
 </body>
 </html>
+
